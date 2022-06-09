@@ -56,5 +56,11 @@ int main(int argc, char *argv[]) {
 /*
 if we use mutex and lock in one thread and unlock in another thread, it behaves abnormally as it requies to immiditely to remove the lock after critical
 section has done its works in that thread, thus it breaks the program abruptly
-meanwhile semaphores has no requirements for unlocking in same thread or at same time after the critical section has funished working
+meanwhile semaphores has no requirements for unlocking in same thread or at same time after the critical section has funished working.
+
+Strictly speaking, 
+a mutex is a locking mechanism used to synchronize access to a resource. Only one task (can be a thread or process based on OS abstraction) can acquire the mutex. It means there is ownership associated with a mutex, and only the owner can release the lock (mutex). 
+
+Semaphore is signaling mechanism (“I am done, you can carry on” kind of signal). For example, if you are listening to songs (assume it as one task) on your mobile phone and at the same time, your friend calls you,
+an interrupt is triggered upon which an interrupt service routine (ISR) signals the call processing task to wakeup. 
 */
