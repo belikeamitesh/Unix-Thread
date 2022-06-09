@@ -63,4 +63,6 @@ a mutex is a locking mechanism used to synchronize access to a resource. Only on
 
 Semaphore is signaling mechanism (“I am done, you can carry on” kind of signal). For example, if you are listening to songs (assume it as one task) on your mobile phone and at the same time, your friend calls you,
 an interrupt is triggered upon which an interrupt service routine (ISR) signals the call processing task to wakeup. 
+
+the objective of mutex is atomic access. There are other ways to achieve atomic access like disabling interrupts which can be much faster but ruins responsiveness.
 */
